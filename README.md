@@ -1,2 +1,8 @@
-# cert-generator
-Certification Generator
+## Certification Generator
+
+Install OpenCV:
+
+```
+pip install opencv-python
+```
+
