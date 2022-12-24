@@ -4,9 +4,12 @@ import cv2
 names = []
 
 def generate():
-    # Params:
+    # File Name:
+    file = ""
+
+    # Params for cert:
     font = cv2.FONT_HERSHEY_SIMPLEX
-    fontsize = 3
+    fontSize = 3
     thickness = 5
     color = (255, 255, 255)
 
@@ -15,8 +18,8 @@ def generate():
     position = (1200, 785)
 
     for name in names:
-        template = cv2.imread("cert.png")
-        cv2.putText(template, name, position, font, fontsize, color, thickness, cv2.LINE_AA)
+        template = cv2.imread(file)
+        cv2.putText(template, name, position, font, fontSize, color, thickness, cv2.LINE_AA)
         cv2.imwrite(f'new-cert/{name}.png', template)
 
 
